@@ -1,0 +1,33 @@
+
+<h1>Blog posts --- testing</h1>
+<p><?php echo $html->link("Add Post", array('action'=>'add')); ?>
+<table>
+	<tr>
+		<th>Id</th>
+		<th>Title</th>
+                <th>Action</th>
+		<th>Created</th>
+	</tr>
+
+<!-- Here's where we loop through our $posts array, printing out post info -->
+
+<?php foreach ($posts as $post): ?>
+	<tr>
+		<td><?php echo $post['Post']['id']; ?></td>
+		<td>
+			<?php echo $html->link($post['Post']['title'],array('action'=>'view', 'id'=>$post['Post']['id']));?>
+                </td>
+                <td>
+			<?php echo $html->link(
+				'Delete', 
+				array('action'=>'delete', 'id'=>$post['Post']['id']), 
+				null, 
+				'Are you sure?'
+			)?>
+			<?php echo $html->link('Edit', array('action'=>'edit', 'id'=>$post['Post']['id']));?>
+		</td>
+		<td><?php echo $post['Post']['created']; ?></td>
+	</tr>
+<?php endforeach; ?>
+
+</table>
