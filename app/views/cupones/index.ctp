@@ -1,61 +1,92 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>Cupones Beta 1.0</title>
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-</head>
-<body>
-
-<!-- If you'd like some sort of menu to 
-show up on all of your views, include it here -->
-<div id="header">
-    <div id="menu">Test Menu</div>
-</div>
-
-<!-- Here's where I want my views to be displayed -->
+<div class="header-logo">
+          <img src="assets/logo.png" alt="micupon.mx" />
 <?php echo $form->create('Cupone',array('action'=>'search'));?>
-        <fieldset>
-                <legend><?php __('Cupone Search');?></legend>
-        <?php
-                echo $form->input('Search.keywords');
-                echo $form->input('Search.tag_id');
-                echo $form->submit('Search');
-        ?>
-        </fieldset>
-<?php echo $form->end();?>
-<?php foreach ($arrCupones as $cupon): ?>
-<div class="desc">
+		
+              <div id="searchdiv">
+              <?php
+                echo $form->input('Search.keywords', array('value' =>'Buscar', 'label' => '', 'div' => 'false'));
+                ?>
+              </div>
+              <div id="drop-box">
+             
+          <?php
+                echo $form->input('Search.tag_id', array('value' =>'Lista Despegable', 'label' => '', 'div' => 'false'));
+                ?>
+          </div>
+                  <input type="hidden" id="searchsubmit">
+              </div>
+<?php echo $form->end(); ?>
+ </div>
+ 
+ 
 
-							<h2><?php echo $cupon['Cupone']['titulo'];?></h2>
-								<?php echo $cupon['Cupone']['descripcion'];?>
-									<div class="rate-post">
-					
-								<div class="upper">
-							
-														
-									
-								<div>
-								<img alt="" class="rectangle-rating" src="/img/no-rating2.gif"/>
-								</div>
-								<em><?php echo $cupon['Cupone']['vigencia'];?></em>
+        <div class="header-title">
+          <img src="assets/titulo-busca-ahorro.jpg" id="buscahorro-img" alt="" />
+          <img src="assets/edificios.jpg" id="edificios-img" alt="" />
+          <a href="#"><img src="assets/btn-obtener-cupon.jpg" id="obtenercupon-btn" alt="Haz click y enterate" /></a>
+        </div>
+      </div> <!-- head-wrap -->
 
-								
-							
-								 	
-								
-								</div>
-							</div> 
-							
-						 
-								<p>Fresh and stylish, Adara Whistler Hotel brings new meaning to unique boutiques. Adara Whistler Hotel offers a completely original experience: integ... 
-							<a href="/profiles/adara-hotel">More</a></p>
-						</div>
-<?php endforeach; ?>
+      <div id="container">
 
+        <div id="left-container">
+          <img src="assets/Contenido/subtitulo-categorias.jpg" id="subcatego-btn" alt=""/>
+          		 <div id="categorias">
+          	    	<a href="#"><img src="assets/Contenido/cat-resta.jpg" alt="Restaurantes"/></a>
+          		 	<a href="#"><img src="assets/Contenido/cat-bares.jpg" alt="Bares"/></a>
+         		 	<a href="#"><img src="assets/Contenido/cat-diversion.jpg" alt="Diversion"/></a>
+         		 	<a href="#"><img src="assets/Contenido/cat-servicios.jpg" alt="Servicios"/></a>
+          		 	<a href="#"><img src="assets/Contenido/cat-salud.jpg" alt="Salud"/></a>
+         		 	<a href="#"><img src="assets/Contenido/cat-talleres.jpg" alt="Talleres"/></a>
+         		 	<a href="#"><img src="assets/Contenido/cat-vestir.jpg" alt="Vestir" /></a>
+          		 	<a href="#"><img src="assets/Contenido/cat-calzado.jpg" alt="Calzado"/></a>
+         		 	<a href="#"><img src="assets/Contenido/cat-varios.jpg" alt="Varios"/></a>
+         		 </div>
+         		 <a href="#" id="anunciate"><img src="assets/etiqueta-anunciate.jpg" alt="Anunciate con nosotros" /></a>
+        </div> <!-- -end top-container -->
 
-<!-- Add a footer to each displayed page -->
-<div id="footer">...</div>
+        <div id="content-container">        	
+          <div id="cupon-container" class="roundedBox">				
+            
+            	<img src="assets/Contenido/esquinas-contenido/etiqueta-izq.jpg" class="etiqueta-izq" alt=""/>            	
+            	<img src="assets/Contenido/esquinas-contenido/etiqueta-der.jpg" class="etiqueta-der" alt=""/>
+            <div class="cupon-title">Lo m&aacute;s nuevo</div>
+            <div class="coupon-coupons" >
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" /></a>
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" /></a>
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" /></a>
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>
+            </div>
 
-</body>
-</html>
+            <img src="assets/Contenido/esquinas-contenido/etiqueta-izq.jpg" class="etiqueta-izq" alt=""/>            	
+            <img src="assets/Contenido/esquinas-contenido/etiqueta-der.jpg" class="etiqueta-der" alt=""/>
+            <div class="cupon-title">Lo m&aacute;s impreso</div>            
+            <div class="coupon-coupons" >
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" /></a>
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" /></a>
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>             
+            </div>
+
+          </div>
+        </div> <!-- end left-div -->
+
+        <div id="right-container">
+          <div>
+            <a href="#"><img src="assets/icon-face.jpg" alt="facebook it!"/></a>
+            <a href="#"><img src="assets/icon-twitter.jpg" alt="twitealo!"/></a>
+            <a href="#"><img src="assets/icon-mail.jpg" alt="email it!"/></a>
+          </div>
+          <a href="#"><img src="assets/Contenido/banner-publicidad1.jpg" alt="publicidad 1"/></a>
+          <a href="#"><img src="assets/Contenido/banner-publicidad2.jpg" alt="publicidad 2"/></a>
+          <a href="#"><img src="assets/Contenido/banner-publicidad3.jpg" alt="publicidad 3" /></a>
+        </div> <!-- end right-container -->
+
+      </div> <!-- end container -->

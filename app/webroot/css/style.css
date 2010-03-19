@@ -1,0 +1,315 @@
+/*
+Theme Name: racNews
+Theme URI: http://wordpress.org/
+Description: Template by default for the footballteam Loros Colima.
+Version: 0.1 Alfa
+Author: Adrian Castillo
+Author URI: rodacato@gmail.com
+Tags: clean, newspaper, three columns, widgets, grass, custom header, fixed width
+
+	racNews v0.1 Alfa
+	rodacato@gmail.com
+
+	This theme was designed and built by Adrian Castillo.
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  }
+
+body {
+  background-color: #00AFF0;
+  font-family: Myriad Pro, Arial;
+  }
+
+a {
+  outline: 0;
+  }
+
+a:link, a:visited {
+  text-decoration: none;
+  }
+
+a:hover {
+  }
+
+h1 {
+  }
+
+h2 {
+  }
+
+h3 {
+  }
+
+blockquote {
+  }
+
+
+/*------------------------------------------------*/
+/*----------------[ MAIN LAYOUT ]-----------------*/
+/*------------------------------------------------*/
+#wrapper {
+  width: 1200px;
+  margin: auto;
+  padding: 0px;
+  }
+
+#head-container {
+  width: 1150px;
+  }
+
+#container {
+  width: 1150px;
+  min-height: 600px;
+  display: table;
+  background: url(../assets/fondo-rayas.jpg) repeat-x #FBF59D;
+  }
+  
+  
+#left-container {
+  float: left;
+  width: 180px;
+  height: 600px;  
+  }
+
+#content-container{
+  float: left;
+  width: 750px;
+  height: 960px;  
+  }
+
+#right-container {
+  float: left;
+  width: 215px;
+  }
+
+#footer-container {
+  width: 1150px;
+  min-height: 150px;
+  background-color: #0481AF;
+  }
+/*------------------------------------------------*/
+/*---------------[ HEADER STYLES ]----------------*/
+/*------------------------------------------------*/
+
+#head-container div{
+  font-size: 14px;
+  line-height: 22px;
+  color: #FFFFFF;
+  position:relative;
+  }
+
+#head-container div span{
+  color: #FDDC43;
+  font-weight: bold;
+  font-size: 16px;
+  }
+
+.header-tel{
+  float:right;
+  margin: -22px 0px 0px 0px;
+  padding: 0px 120px 0px 0px;
+  line-height: 30px;
+  vertical-align:middle;
+  }
+
+.header_usrname {
+	text-align: center;
+	margin-top: 5px;
+}
+
+.header-tel img {
+  width: 21px;
+  height: 21px;
+  margin: 1px 5px 0px 0px;
+  float:left;
+  }
+
+.header-logo {
+  height: 126px;
+  margin: 5px 0px 0px 0px;
+  background: url(../assets/fondo-barras.jpg) repeat-x;
+  }
+  
+.cupon-title {
+  font-weight: bold;  
+  color: #fff;
+  font-family: Myriad Pro, Arial;
+  font-size: 1.5em;
+  padding: 0px 0px 0px 25px;
+  height: 32px;  
+  background: url(../assets/Contenido/esquinas-contenido/fondo-titulo.jpg) repeat-x;
+  }
+
+.header-logo img {
+  float: left;
+  margin: 10px 0px 0px 100px;
+  }
+
+.header-title {
+  height: 296px;
+  background: url(../assets/fondo.jpg) repeat-x;
+  }
+
+.header-title img {
+  float: left;
+  border: none;
+  }
+  
+
+#searchdiv {
+  background: url("../assets/search-box.png") no-repeat scroll 0 0 transparent;
+  float: right;
+  height: 40px;
+  margin: 45px 125px 0 0;
+  padding: 5px 0 3px;
+  width: 250px;
+  }
+
+#drop-box {
+  background: url("../assets/drop-box.png") no-repeat scroll 0 0 transparent;
+  float: right;
+  height: 40px;
+  margin: 45px 40px 0 0;
+  padding: 5px 0 3px;
+  width: 250px;
+  }
+
+#searchdiv input , input {
+  background: none repeat scroll 0 0 #F4F4F4;
+  border: medium none;
+  color: #AEAEAE;
+  font-size: 18px;
+  margin-left: 10px;
+  padding: 4px 5px;
+  width: 188px;
+  }
+
+#buscahorro-img {
+	margin-left: 180px;
+}
+
+#edificios-img {
+	margin-left: 130px;
+}
+
+#obtenercupon-btn {
+	float:right; 
+	margin: 90px 60px 0px 0px;
+}
+
+/*------------------------------------------------*/
+/*-------------[ CONTAINER STYLES ]---------------*/
+/*------------------------------------------------*/
+
+
+#right-container > a img {
+  float: left;
+  margin: 5px 10px;
+  }
+
+#right-container img {
+  border: none;
+  }
+
+#right-container > div {
+  float: right;
+  margin: 35px 30px 5px 0px;
+  }
+
+#right-container > div a img {
+  margin-left: 5px;
+  }
+  
+#subcatego-btn {
+	float:left; 
+	margin: 120px 0 0 22px;
+}
+
+#categorias img{
+	border:none;
+	float:right; 
+	margin: -2px -37px 0 22px;
+}
+
+#anunciate img{
+	border:none;
+	margin-top: 15px;
+	margin-left: 20px
+	
+}
+
+
+
+#cupon-container {
+	width: 700px; 
+	height: 800px; 
+	background-color: rgb(255, 255, 255); 
+	margin: 30px;
+}
+
+.coupon-coupons {
+	padding: 25px;
+}
+
+.coupon-coupons img{
+	margin-bottom: 15px;
+	border:none;
+}
+
+.leftcupon{
+	margin-left: 15px;
+}
+
+.etiqueta-izq {
+	float:left;
+	margin: 0 0 0 -7px;
+}
+
+.etiqueta-der {
+	float:right;
+	margin: 0 -7px 0 0;
+}
+
+/*------------------------------------------------*/
+/*---------------[ FOOTER STYLES ]----------------*/
+/*------------------------------------------------*/
+#footer-container img {
+  float: left;
+  border: none;
+  margin: 45px 0px 0px 40px;
+  }
+
+.footer-text {
+  text-align: center;
+  margin-top: 30px;
+  width:100%;
+  }
+
+.footer-text span {
+  color: #FFFFFF;
+  font-size:10px;
+  font-weight: bold;
+  }
+
+#quienes-somos {
+	margin: 15px 0px 0px 230px;
+}
+
+.roundedBox {
+  -moz-border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -ms-border-radius: 14px;
+  border-radius: 14px;
+  }
+  
+/*------------------------------------------------*/
+/*---------------[ CLEANERS ]----------------*/
+/*------------------------------------------------*/  
+.clean-div {
+	clear: both;
+}

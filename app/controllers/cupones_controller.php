@@ -15,9 +15,9 @@
                                 $url[$k.'.'.$kk]=$vv;
                         }
                 }
-echo "testxxx";
+
                 // redirect the user to the url
-                $this->redirect($url, null, true);
+              //  $this->redirect($url, null, true);
         }
         
         function index() {
