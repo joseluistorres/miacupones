@@ -4,7 +4,9 @@
 		
               <div id="searchdiv">
               <?php
-                echo $form->input('Search.keywords', array('value' =>'Buscar', 'label' => '', 'div' => 'false'));
+                echo $form->input('Search.keywords', array('value' =>'Buscar x', 'label' => '', 'div' => 'false'));
+                echo $form->submit('Search');
+                
                 ?>
               </div>
               <div id="drop-box">
@@ -52,6 +54,9 @@
             	<img src="assets/Contenido/esquinas-contenido/etiqueta-der.jpg" class="etiqueta-der" alt=""/>
             <div class="cupon-title">Lo m&aacute;s nuevo</div>
             <div class="coupon-coupons" >
+            <?php
+            echo "<pre>".print_r($mostPrintedCupons)."</pre>";
+            ?>
               <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" /></a>
               <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>
               <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>
@@ -67,6 +72,9 @@
             <img src="assets/Contenido/esquinas-contenido/etiqueta-der.jpg" class="etiqueta-der" alt=""/>
             <div class="cupon-title">Lo m&aacute;s impreso</div>            
             <div class="coupon-coupons" >
+            <?php
+            echo "<pre>".print_r($mostRecentlyCreatedCupons)."</pre>";
+            ?>
               <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" /></a>
               <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>
               <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>
