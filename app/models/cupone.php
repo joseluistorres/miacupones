@@ -3,12 +3,21 @@
     {
         var $name = 'Cupone';
 
-       var $belongsTo = array('mia_clientes' =>
+       var $belongsTo = array(
+           'mia_clientes' =>
                  array('className'    => 'Mia_clientes',
                      'conditions'   => '',
                      'order'        => '',
-                     'foreignKey'   => 'mia_cliente_id'
-                 )
+                     'foreignKey'   => 'mia_cliente_id',
+                     
+                 ),
+             'categorias' =>
+                      array('className'    => 'Categorias',
+                          'conditions'   => '',
+                          'order'        => '',
+                          'foreignKey'   => 'categoria_id',
+
+                      )
              );
         
         function search($conditions=null) {

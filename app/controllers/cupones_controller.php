@@ -14,12 +14,18 @@
         }
         
         function index() {
-            
+
+            $this->loadModel('Categoria');
+            $categorias = $this->Categoria->getAllWithCupons();
+            $this->set('categorias', $categorias);
+                        
             $mostPrintedCupons = $this->Cupone->getResults('', 'contador', 'activo');
             $this->set('mostPrintedCupons', $mostPrintedCupons);
             
             $mostRecentlyCreatedCupons = $this->Cupone->getResults('', 'created', 'activo');
             $this->set('mostRecentlyCreatedCupons', $mostRecentlyCreatedCupons);
+            
+
         }
         
     }

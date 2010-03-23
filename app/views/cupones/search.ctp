@@ -1,10 +1,23 @@
 <div class="header-logo">
           <img src="assets/logo.png" alt="micupon.mx" />
-<?php 
-
-echo $this->element('searchForm');
-
-?>
+<?php echo $form->create('Cupone',array('action'=>'search'));?>
+		
+              <div id="searchdiv">
+              <?php
+                echo $form->input('Search.keywords', array('value' =>'Buscar x', 'label' => '', 'div' => 'false'));
+                echo $form->submit('Search');
+                
+                ?>
+              </div>
+              <div id="drop-box">
+             
+          <?php
+                echo $form->input('Search.tag_id', array('value' =>'Lista Despegable', 'label' => '', 'div' => 'false'));
+                ?>
+          </div>
+                  <input type="hidden" id="searchsubmit">
+              </div>
+<?php echo $form->end(); ?>
  </div>
  
  
@@ -21,16 +34,15 @@ echo $this->element('searchForm');
         <div id="left-container">
           <img src="assets/Contenido/subtitulo-categorias.jpg" id="subcatego-btn" alt=""/>
           		 <div id="categorias">
-                 <?php
-                 foreach ($categorias as $categoria){
-                     $arrAtribsImage = array(
-        "alt" => "".$categoria['Categoria']['titulo']."", 
-       'url' => array('controller' => 'cupone', 'action' => 'view', $categoria['Categoria']['id'])
-    );
-                 	echo $html->image("Contenido/cat-resta.jpg", $arrAtribsImage);
-                 }
-                 ?>
-          	    	
+          	    	<a href="#"><img src="assets/Contenido/cat-resta.jpg" alt="Restaurantes"/></a>
+          		 	<a href="#"><img src="assets/Contenido/cat-bares.jpg" alt="Bares"/></a>
+         		 	<a href="#"><img src="assets/Contenido/cat-diversion.jpg" alt="Diversion"/></a>
+         		 	<a href="#"><img src="assets/Contenido/cat-servicios.jpg" alt="Servicios"/></a>
+          		 	<a href="#"><img src="assets/Contenido/cat-salud.jpg" alt="Salud"/></a>
+         		 	<a href="#"><img src="assets/Contenido/cat-talleres.jpg" alt="Talleres"/></a>
+         		 	<a href="#"><img src="assets/Contenido/cat-vestir.jpg" alt="Vestir" /></a>
+          		 	<a href="#"><img src="assets/Contenido/cat-calzado.jpg" alt="Calzado"/></a>
+         		 	<a href="#"><img src="assets/Contenido/cat-varios.jpg" alt="Varios"/></a>
          		 </div>
          		 <a href="#" id="anunciate"><img src="assets/etiqueta-anunciate.jpg" alt="Anunciate con nosotros" /></a>
         </div> <!-- -end top-container -->
@@ -43,29 +55,17 @@ echo $this->element('searchForm');
             <div class="cupon-title">Lo m&aacute;s nuevo</div>
             <div class="coupon-coupons" >
             <?php
-            
-            $count = 1;
-            
-            foreach ($mostPrintedCupons as $mprintedCupons){
-            	$mod = ($count-1) % 3;
-                $arrAtribsImage = array(
-    "alt" => "".$mprintedCupons['Cupone']['titulo']."", 
-   'url' => array('controller' => 'cupone', 'action' => 'view', $mprintedCupons['Cupone']['id'])
-);
-
-            	if ($count==1 || $mod==0){
-                	$arrAtribsImage["class"] = "";
-                }else{
-                	$arrAtribsImage["class"] = "leftcupon";
-                }
-                
-                echo $html->image("Contenido/cupon.jpg", $arrAtribsImage);
-                $count++;
-            }
-            
+            echo "<pre>".print_r($mostPrintedCupons)."</pre>";
             ?>
-             
-
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" /></a>
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" /></a>
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" /></a>
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>
+              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>
             </div>
 
             <img src="assets/Contenido/esquinas-contenido/etiqueta-izq.jpg" class="etiqueta-izq" alt=""/>            	
@@ -73,7 +73,7 @@ echo $this->element('searchForm');
             <div class="cupon-title">Lo m&aacute;s impreso</div>            
             <div class="coupon-coupons" >
             <?php
-           // echo "<pre>".print_r($mostRecentlyCreatedCupons)."</pre>";
+            echo "<pre>".print_r($mostRecentlyCreatedCupons)."</pre>";
             ?>
               <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" /></a>
               <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>
