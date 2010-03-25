@@ -1,18 +1,6 @@
 /*
-Theme Name: racNews
-Theme URI: http://wordpress.org/
-Description: Template by default for the footballteam Loros Colima.
-Version: 0.1 Alfa
-Author: Adrian Castillo
-Author URI: rodacato@gmail.com
-Tags: clean, newspaper, three columns, widgets, grass, custom header, fixed width
+CSS
 
-	racNews v0.1 Alfa
-	rodacato@gmail.com
-
-	This theme was designed and built by Adrian Castillo.
-	The CSS, XHTML and design is released under GPL:
-	http://www.opensource.org/licenses/gpl-license.php
 */
 
 * {
@@ -175,7 +163,7 @@ blockquote {
   float: right;
   height: 40px;
   margin: 45px 40px 0 0;
-  padding: 5px 0 3px;
+  padding: 3px 0 3px;
   width: 250px;
   }
 
@@ -188,7 +176,53 @@ blockquote {
   padding: 4px 5px;
   width: 188px;
   }
+  
+#CuponeTitulo {
+  background: url("../assets/search-box.png") no-repeat scroll 0 0 transparent;
+  float: right;
+  height: 40px;
+  margin: 45px 125px 0 0;
+  padding: 3px 15px 5px; /*top right bottom left*/
+  width: 250px;
+  }
 
+#CuponeTitulo input , input {
+ /* background: none repeat scroll 0 0 #F4F4F4;
+  border: medium none;
+  
+  font-size: 18px;
+  margin-left: 10px;*/
+  padding: 4px 5px;
+ 
+  }
+
+div.auto_complete {
+  position:absolute;
+  width:250px;
+  background-color:white;
+  border:1px solid #888;
+  margin:0;
+  padding:0;
+  color:#000;
+}
+div.auto_complete ul {
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  color:#000;
+}
+div.auto_complete ul li.selected { background-color: #ffb;}
+div.auto_complete ul li {
+  list-style-type:none;
+  display:block;
+  margin:0;
+  padding:2px;
+  height:32px;
+  cursor:pointer;
+  color:#000;
+}
+
+  
 #buscahorro-img {
 	margin-left: 180px;
 }
@@ -201,6 +235,8 @@ blockquote {
 	float:right; 
 	margin: 90px 60px 0px 0px;
 }
+
+
 
 /*------------------------------------------------*/
 /*-------------[ CONTAINER STYLES ]---------------*/

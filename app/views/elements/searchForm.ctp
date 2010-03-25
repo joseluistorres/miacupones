@@ -1,12 +1,7 @@
-<?php echo $form->create('Cupone',array('action'=>'search'));?>
-		
-              <div id="searchdiv">
-              <?php
-                echo $form->input('Search.keywords', array('value' =>'Buscar x', 'label' => '', 'div' => 'false'));
-                echo $form->submit('Search');
-                
-                ?>
-              </div>
+<?php 
+	 echo $form->create('Cupone',array('action'=>'search'));
+     echo $ajax->autocomplete('Cupone.titulo','', array('maxlength'=>10));
+?>       
               <div id="drop-box">
              
           <?php

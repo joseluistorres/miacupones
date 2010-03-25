@@ -34,14 +34,15 @@ class AutocompleteComponent extends Object {
 	var $enabled = true;
 	var $components = array('RequestHandler');
 	var $handles = array();
-
-/**
+  
+  /**
  * Startup
  *
  * @param object A reference to the controller
  * @return null
  */
 	function startup(&$controller) {
+        Configure::write('debug', '0');
 
 		if (!$this->enabled || !$this->RequestHandler->isAjax() || !$this->RequestHandler->isPost()) {
 			return true;

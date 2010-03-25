@@ -5,7 +5,11 @@
       <link rel="shortcut icon" href="assets/favicon.ico" />
       <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <?php echo $scripts_for_layout ?>
+  <?php echo $scripts_for_layout; 
+  	echo $javascript->link('prototype');
+	echo $javascript->link('scriptaculous');
+
+  ?>
 </head>
   <body>
   <div>

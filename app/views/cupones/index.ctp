@@ -7,7 +7,6 @@ echo $this->element('searchForm');
 ?>
  </div>
  
- 
 
         <div class="header-title">
           <img src="assets/titulo-busca-ahorro.jpg" id="buscahorro-img" alt="" />
