@@ -27,7 +27,7 @@ echo $this->element('searchForm');
         "alt" => "".$categoria['Categoria']['titulo']."", 
        'url' => array('controller' => 'cupone', 'action' => 'view', $categoria['Categoria']['id'])
     );
-                 	echo $html->image("Contenido/cat-resta.jpg", $arrAtribsImage);
+                 	echo $html->image("Contenido/".$categoria['Categoria']['img_categoria'], $arrAtribsImage);
                  }
                  ?>
           	    	
@@ -44,24 +44,7 @@ echo $this->element('searchForm');
             <div class="coupon-coupons" >
             <?php
             
-            $count = 1;
-            
-            foreach ($mostPrintedCupons as $mprintedCupons){
-            	$mod = ($count-1) % 3;
-                $arrAtribsImage = array(
-    "alt" => "".$mprintedCupons['Cupone']['titulo']."", 
-   'url' => array('controller' => 'cupone', 'action' => 'view', $mprintedCupons['Cupone']['id'])
-);
-
-            	if ($count==1 || $mod==0){
-                	$arrAtribsImage["class"] = "";
-                }else{
-                	$arrAtribsImage["class"] = "leftcupon";
-                }
-                
-                echo $html->image("Contenido/cupon.jpg", $arrAtribsImage);
-                $count++;
-            }
+            echo $cupondiv->setArray($mostPrintedCupons, 3);
             
             ?>
              
@@ -72,15 +55,14 @@ echo $this->element('searchForm');
             <img src="assets/Contenido/esquinas-contenido/etiqueta-der.jpg" class="etiqueta-der" alt=""/>
             <div class="cupon-title">Lo m&aacute;s impreso</div>            
             <div class="coupon-coupons" >
+            
             <?php
-           // echo "<pre>".print_r($mostRecentlyCreatedCupons)."</pre>";
+            
+            echo $cupondiv->setArray($mostRecentlyCreatedCupons, 3, 6);
+            
             ?>
-              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" /></a>
-              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>
-              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>
-              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" /></a>
-              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>
-              <a href="#"><img src="assets/Contenido/cupon.jpg" alt="cupon x" class="leftcupon"/></a>             
+            
+                           
             </div>
 
           </div>

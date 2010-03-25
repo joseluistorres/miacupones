@@ -1,7 +1,9 @@
 <?php
     class CuponesController extends AppController
     {
-
+        var $components = array('Autocomplete');
+        var $helpers = array('Html', 'Javascript', 'Ajax', 'cupondiv');
+        
         function search() {
              if(isset($this->passedArgs['Search.keywords'])) {
                  $keywords = $this->passedArgs['Search.keywords'];
