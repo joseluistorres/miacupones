@@ -54,7 +54,7 @@ blockquote {
   width: 1150px;
   min-height: 600px;
   display: table;
-  background: url(../assets/fondo-rayas.jpg) repeat-x #FBF59D;
+  background: url(../img/fondo-rayas.jpg) repeat-x #FBF59D;
   }
   
   
@@ -120,7 +120,7 @@ blockquote {
 .header-logo {
   height: 126px;
   margin: 5px 0px 0px 0px;
-  background: url(../assets/fondo-barras.jpg) repeat-x;
+  background: url(../img/fondo-barras.jpg) repeat-x;
   }
   
 .cupon-title {
@@ -129,8 +129,9 @@ blockquote {
   font-family: Myriad Pro, Arial;
   font-size: 1.5em;
   padding: 0px 0px 0px 25px;
-  height: 32px;  
-  background: url(../assets/Contenido/esquinas-contenido/fondo-titulo.jpg) repeat-x;
+  height: 32px;
+  width:675px;
+  background: url(../img/Contenido/esquinas-contenido/fondo-titulo.jpg) repeat-x;
   }
 
 .header-logo img {
@@ -140,7 +141,7 @@ blockquote {
 
 .header-title {
   height: 296px;
-  background: url(../assets/fondo.jpg) repeat-x;
+  background: url(../img/fondo.jpg) repeat-x;
   }
 
 .header-title img {
@@ -150,7 +151,7 @@ blockquote {
   
 
 #searchdiv {
-  background: url("../assets/search-box.png") no-repeat scroll 0 0 transparent;
+  background: url("../img/search-box.png") no-repeat scroll 0 0 transparent;
   float: right;
   height: 40px;
   margin: 45px 125px 0 0;
@@ -159,7 +160,7 @@ blockquote {
   }
 
 #drop-box {
-  background: url("../assets/drop-box.png") no-repeat scroll 0 0 transparent;
+  background: url("../img/drop-box.png") no-repeat scroll 0 0 transparent;
   float: right;
   height: 40px;
   margin: 45px 40px 0 0;
@@ -178,23 +179,78 @@ blockquote {
   }
   
 #CuponeTitulo {
-  background: url("../assets/search-box.png") no-repeat scroll 0 0 transparent;
+  background: url("../img/search-box.png") no-repeat scroll 0 0 transparent;
   float: right;
   height: 40px;
   margin: 45px 125px 0 0;
-  padding: 3px 15px 5px; /*top right bottom left*/
-  width: 250px;
+  padding: 3px 15px 5px; 
+  width: 220px;
   }
 
 #CuponeTitulo input , input {
- /* background: none repeat scroll 0 0 #F4F4F4;
-  border: medium none;
-  
-  font-size: 18px;
-  margin-left: 10px;*/
   padding: 4px 5px;
- 
   }
+
+/* cupones thumbnails */
+
+.thumbnail {
+	background-color:#FFF;
+	border:1px solid #D0D0D0;
+	float:left;
+	margin-right:5px;
+	margin-bottom:10px;
+	padding:3px 3px 3px;
+	width:190px;
+	height:100px;
+}
+
+.frame_image {
+	display:inline-block;
+	overflow:hidden;
+	border:0px solid #000;
+	float:left;
+	
+}
+
+.frame_image img {
+	max-height:58px;
+	max-width:73px;
+	border:0 none;
+}
+
+.tituloCupon {
+	display:inline-block;
+	overflow:hidden;
+	padding:0 0 5px 1px;
+	border:0px solid #000;
+	max-width:105px;
+	max-height:73px;
+	font-size:18px;
+}
+
+a.tituloCupon {
+	font-weight:bold;
+}
+
+.textoCupon {
+	position:relative;
+	top:-6px;
+	overflow:hidden;
+	padding: 0 0 0 0;
+	border:0px solid #000;
+	max-width:186px;
+	max-height:42px;
+	font-size:12px;
+}
+
+.cupondivcontainer {
+	margin-top:15px;
+	float: left;
+}
+
+/*------------------------------------------------*/
+/*----------------[ AUTO COMPLETE ]-----------------*/
+/*------------------------------------------------*/
 
 div.auto_complete {
   position:absolute;
@@ -204,6 +260,7 @@ div.auto_complete {
   margin:0;
   padding:0;
   color:#000;
+
 }
 div.auto_complete ul {
   list-style-type:none;
@@ -293,12 +350,12 @@ div.auto_complete ul li {
 }
 
 .coupon-coupons img{
-	margin-bottom: 15px;
+	/*margin-bottom: 15px;*/
 	border:none;
 }
 
 .leftcupon{
-	margin-left: 15px;
+	margin-left: 10px;
 }
 
 .etiqueta-izq {

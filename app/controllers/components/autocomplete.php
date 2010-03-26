@@ -42,7 +42,7 @@ class AutocompleteComponent extends Object {
  * @return null
  */
 	function startup(&$controller) {
-        Configure::write('debug', '0');
+        //Configure::write('debug', '0');
 
 		if (!$this->enabled || !$this->RequestHandler->isAjax() || !$this->RequestHandler->isPost()) {
 			return true;

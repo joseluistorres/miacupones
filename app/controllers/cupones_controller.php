@@ -5,8 +5,12 @@
         var $helpers = array('Html', 'Javascript', 'Ajax', 'cupondiv');
         
         function search() {
-             if(isset($this->passedArgs['Search.keywords'])) {
-                 $keywords = $this->passedArgs['Search.keywords'];
+            $this->loadModel('Categoria');
+            $categorias = $this->Categoria->getAllWithCupons();
+            $this->set('categorias', $categorias);
+            
+             if(isset($this->data['Cupone']['titulo'])) {
+                 $keywords = $this->data['Cupone']['titulo'];
              }else{
                 $keywords = '';
              }

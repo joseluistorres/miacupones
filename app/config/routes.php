@@ -31,10 +31,13 @@
  * its action called 'display', and we pass a param to select the view file
  * to use (in this case, /app/views/pages/home.ctp)...
  */
-//	Router::connect('/', array('controller' => 'posts', 'action' => 'index', 'index'));
+//	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
 	Router::connect ('/', array('controller'=>'cupones', 'action'=>'index'));
+//	Router::connect ('/cupones', array('controller'=>'cupones', 'action'=>'index'));
 /**
  * ...and connect the rest of 'Pages' controller's urls.
  */
-//	Router::connect('/posts/add', array('controller' => 'posts', 'action' => 'add'));
+    Router::connect('/micupon/:action/*', array('controller' => 'cupones',
+       'action' => ':action'));
+	//Router::connect('/cupones/*', array('controller' => 'pages', 'action' => 'display'));
 ?>
