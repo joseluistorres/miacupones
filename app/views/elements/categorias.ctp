@@ -5,7 +5,7 @@
                  foreach ($categorias as $categoria){
                      $arrAtribsImage = array(
         "alt" => "".$categoria['Categoria']['titulo']."", 
-       'url' => array('controller' => 'cupone', 'action' => 'view', $categoria['Categoria']['id'])
+       'url' => array('controller' => 'cupones', 'action' => 'porCategoria', $categoria['Categoria']['id'])
     );
                  	echo $html->image("Contenido/".$categoria['Categoria']['img_categoria'], $arrAtribsImage);
                  }

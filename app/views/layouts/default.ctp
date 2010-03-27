@@ -24,8 +24,9 @@
         <div class="header-tel">
           <img src="../img/icon-tel.png" alt="Contactanos"/>Tel: (312) 314 3049
         </div>
-<div class="header-logo">
-          <img src="../img/logo.png" alt="micupon.mx" />
+<div class="header-logo"><a href="<?php echo $html->url('/', true); ?>" alt="micupon.mx" >
+          <img src="../img/logo.png" alt="micupon.mx" border="0" />
+          </a>
 <?php 
 
 echo $this->element('searchForm');
@@ -53,7 +54,6 @@ echo $this->element('categorias');
 
 <?php echo $content_for_layout ?>
           
- 
           </div>
         </div> <!-- end left-div -->
 

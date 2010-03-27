@@ -20,17 +20,20 @@
                       )
              );
         
-        function search($conditions=null) {
-            return $this->find('all', array('conditions' => $conditions));
+        function search($conditions=null, $orderBy=null) {
+            return $this->find('all', array('conditions' => $conditions, 'order' => $orderBy));
             
         }
         
-        function getResults($keywords=null) {
-            $conditions = $this->createConditionsArray($keywords);
-            return $this->search($conditions);
+        function getResults($keywords=null, $orderBy=null, $activo=null, $categoria=null) {
+            $conditions = $this->createConditionsArray($keywords, $activo, $categoria);
+            if (isset($orderBy)) {
+                    $orderBy = array($this->name.'.'.$orderBy);
+            }
+            return $this->search($conditions, $orderBy);
         }
         
-        function createConditionsArray($keywords=null, $orderBy=null, $activo=null) {
+        function createConditionsArray($keywords=null, $activo=null, $categoria=null) {
             $conditions = array();
             
             if (isset($keywords)) {
@@ -42,16 +45,22 @@
             }
             
             if (isset($activo)) {
-                $conditions['AND'] = array(
+                $activoConditions = array(
                     $this->name.'.status' => "activo",
                     $this->name.'.vigencia >=' => date('m-d-y')
                     );
+                    
+                if (isset($categoria)) {
+                    $activoConditions[$this->name.'.categoria_id'] = $categoria;
+                }
+                
+                Debugger::exportVar($activoConditions);
+                $conditions['AND'] = $activoConditions;
             }
             
+            
                 
-            if (isset($orderBy)) {
-                $conditions['order'] = array($this->name.'.'.$orderBy);
-            }
+           
                 
             return $conditions;
         }

@@ -21,7 +21,7 @@
 
 
                             $imageCupon = $this->Html->link($this->Html->image('Contenido/'.$cupon['Cupone']['imagen_url'], $arrAtribsImage),
-                            'http://192.168.50.213/img/Contenido/'.$cupon['Cupone']['imagen_url'], array('rel' => 'lightbox', 'title' => "".$cupon['Cupone']['titulo']."", 'escape' =>false));
+                            $this->Html->url('/', true).'img/Contenido/'.$cupon['Cupone']['imagen_url'], array('rel' => 'lightbox', 'title' => "".$cupon['Cupone']['titulo']."", 'escape' =>false));
                             $count++;
                             
                             $frame_image = $this->Html->div('frame_image', $imageCupon);

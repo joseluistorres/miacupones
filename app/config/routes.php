@@ -37,7 +37,7 @@
 /**
  * ...and connect the rest of 'Pages' controller's urls.
  */
-    Router::connect('/micupon/:action/*', array('controller' => 'cupones',
+    Router::connect('/:action/*', array('controller' => 'cupones',
        'action' => ':action'));
-	//Router::connect('/cupones/*', array('controller' => 'pages', 'action' => 'display'));
+//	Router::connect('/', array('controller' => 'pages', 'action' => 'display'));
 ?>
