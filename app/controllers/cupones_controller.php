@@ -56,7 +56,17 @@
         }
         
         function cupon(){
+             $this->setCategorias($this->getCategorias());
              
+            if(isset($this->params['pass'][0])) {
+                 $cupon_id = $this->params['pass'][0];
+             }else{
+                $cupon_id = '';
+             }
+             
+             
+             $resultsSearchCupons = $this->Cupone->getResults(null, 'contador', 'activo', null, $cupon_id);
+             $this->set('resultsSearchCupons', $resultsSearchCupons);
         }
         
         private function getCategorias(){

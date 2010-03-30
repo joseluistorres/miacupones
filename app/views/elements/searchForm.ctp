@@ -1,6 +1,6 @@
 <?php 
 	 echo $form->create('Cupone',array('action'=>'search'));
-     echo $ajax->autocomplete('Cupone.titulo','', array('maxlength'=>10, 'value' => 'Buscar'));
+     echo $ajax->autocomplete('Cupone.titulo','', array('maxlength'=>10, 'value' => 'Buscar', 'onMouseDown' => 'javascript:clearMe(this);'));
       echo $form->submit('lupa.jpg', array('class' => 'submitBtn'));
 ?>       
               <div id="drop-box">

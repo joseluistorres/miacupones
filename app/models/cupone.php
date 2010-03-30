@@ -25,15 +25,15 @@
             
         }
         
-        function getResults($keywords=null, $orderBy=null, $activo=null, $categoria=null) {
-            $conditions = $this->createConditionsArray($keywords, $activo, $categoria);
+        function getResults($keywords=null, $orderBy=null, $activo=null, $categoria=null, $cupon_id=null) {
+            $conditions = $this->createConditionsArray($keywords, $activo, $categoria, $cupon_id);
             if (isset($orderBy)) {
                     $orderBy = array($this->name.'.'.$orderBy);
             }
             return $this->search($conditions, $orderBy);
         }
         
-        function createConditionsArray($keywords=null, $activo=null, $categoria=null) {
+        function createConditionsArray($keywords=null, $activo=null, $categoria=null, $cupon_id=null) {
             $conditions = array();
             
             if (isset($keywords)) {
@@ -54,7 +54,10 @@
                     $activoConditions[$this->name.'.categoria_id'] = $categoria;
                 }
                 
-                Debugger::exportVar($activoConditions);
+                if (isset($cupon_id)) {
+                    $activoConditions[$this->name.'.id'] = $cupon_id;
+                }
+                
                 $conditions['AND'] = $activoConditions;
             }
             

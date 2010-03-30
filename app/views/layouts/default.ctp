@@ -12,6 +12,12 @@
 	echo $javascript->link('scriptaculous');
 	echo $javascript->link('lightbox');
   ?>
+  <script type="text/javascript">
+ function clearMe(formfield){
+  if (formfield.defaultValue==formfield.value)
+   formfield.value = ""
+ }
+</script>
 </head>
   <body>
   <div>
