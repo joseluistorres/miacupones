@@ -1,12 +1,14 @@
 <?php
     class CuponesController extends AppController
     {
+        var $uses = array('Cupone', 'Categoria');
         var $components = array('Autocomplete');
         var $helpers = array('Html', 'Javascript', 'Ajax', 'cupondiv', 'Text');
+        var $categorias = null;
         
         function search() {
             
-            $this->set('categorias', $this->getCategorias());
+            $this->setCategorias($this->getCategorias());
             
              if(isset($this->data['Cupone']['titulo'])) {
                  $keywords = $this->data['Cupone']['titulo'];
@@ -14,13 +16,20 @@
                 $keywords = '';
              }
              
+             if(isset($this->data['Search']['tags']))
+             
              $resultsSearchCupons = $this->Cupone->getResults($keywords, 'contador', 'activo');
              $this->set('resultsSearchCupons', $resultsSearchCupons);
         }
         
         function index() {
+            if ($this->Session->check('Username')){
+                $this->set('username', $this->Session->read('Username')) ;
+            }else{
+                $this->set('username','Bienvenido') ;
+            }
 
-            $this->set('categorias', $this->getCategorias());
+            $this->setCategorias($this->getCategorias());
                         
             $mostPrintedCupons = $this->Cupone->getResults('', 'contador', 'activo');
             $this->set('mostPrintedCupons', $mostPrintedCupons);
@@ -32,8 +41,7 @@
         }
         
         function porCategoria(){
-            $this->set('categorias', $this->getCategorias());
-            $this->set('test', print_r($this->params['pass'][0], true)."xxx");
+            $this->setCategorias($this->getCategorias());
             
              if(isset($this->params['pass'][0])) {
                  $categoria = $this->params['pass'][0];
@@ -41,14 +49,28 @@
                 $categoria = '';
              }
              
+             $this->set('nombreCategoria', $this->getNombreCategoria($this->categorias, $categoria));
+             
              $resultsSearchCupons = $this->Cupone->getResults(null, 'contador', 'activo', $categoria);
              $this->set('resultsSearchCupons', $resultsSearchCupons);
         }
         
-        private function getCategorias(){
-            $this->loadModel('Categoria');
-            return $this->Categoria->getAllWithCupons(); 
+        function cupon(){
+             
         }
         
+        private function getCategorias(){
+           return $this->Categoria->getAllWithCupons(); 
+        }
+        
+        private function getNombreCategoria($categorias=null, $categoria_id=0){
+            return $this->Categoria->getNombreCategoria($categorias, $categoria_id); 
+
+        }
+        
+        private function setCategorias($categorias=null){
+            $this->categorias = $this->getCategorias();
+            $this->set('categorias', $this->categorias);
+        }
     }
 ?>

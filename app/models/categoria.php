@@ -45,6 +45,17 @@
            return $this->find('all', compact('conditions'));
            
        }
+       
+       function getNombreCategoria($categorias=null, $categoria_id=0){
+           foreach ($categorias as $categoria){
+              
+               if ($categoria['Categoria']['id']==$categoria_id){
+                   return $categoria['Categoria']['titulo'];
+               }
+           }
+           
+           return false;
+       }
    }
 
 ?>

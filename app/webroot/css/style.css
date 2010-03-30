@@ -36,6 +36,19 @@ h3 {
 blockquote {
   }
 
+select
+{
+	border-width: 0px;
+	padding: 3px;
+	font-size: 11px;
+	font-family: Myriad Pro, Arial;
+	background-color: #F8F8F8;
+	color: #AEAEAE;
+  	font-size: 18px;
+	margin-left: 10px;
+  	/*padding: 4px 5px; */
+  	width: 188px;	
+}
 
 /*------------------------------------------------*/
 /*----------------[ MAIN LAYOUT ]-----------------*/
@@ -177,7 +190,16 @@ blockquote {
   padding: 4px 5px;
   width: 188px;
   }
-  
+
+.submitBtn {
+	position:absolute;
+	margin:48px 545px;
+	float:right;
+	width: 26px;
+	height: 26px;
+	border: 1px black;
+}
+
 #CuponeTitulo {
   background: url("../img/search-box.png") no-repeat scroll 0 0 transparent;
   float: right;
@@ -255,6 +277,7 @@ a.tituloCupon {
 div.auto_complete {
   position:absolute;
   width:250px;
+  height:400px;
   background-color:white;
   border:1px solid #888;
   margin:0;
@@ -292,7 +315,6 @@ div.auto_complete ul li {
 	float:right; 
 	margin: 90px 60px 0px 0px;
 }
-
 
 
 /*------------------------------------------------*/

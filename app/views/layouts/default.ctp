@@ -18,7 +18,13 @@
     <div id="wrapper">
       <div id="head-container" >
         <div class="header_usrname">
-          <span>Hola</span> Jos&eacute; Luis
+          <span>Hola</span> <?php 
+          if (isset($username)){
+          	echo $username;
+          }else{
+          	echo 'Bienvenido';
+          }
+          ?>
         </div>
 
         <div class="header-tel">
@@ -38,7 +44,7 @@ echo $this->element('searchForm');
         <div class="header-title">
           <img src="../img/titulo-busca-ahorro.jpg" id="buscahorro-img" alt="" />
           <img src="../img/edificios.jpg" id="edificios-img" alt="" />
-          <a href="#"><img src="../img/btn-obtener-cupon.jpg" id="obtenercupon-btn" alt="Haz click y enterate" /></a>
+          <a href="../img/pasos.png" rel="lightbox" title=""><img src="../img/btn-obtener-cupon.jpg" id="obtenercupon-btn" alt="Haz click y enterate" /></a>
         </div>
       </div> <!-- head-wrap -->        
 <div id="container">
@@ -59,7 +65,7 @@ echo $this->element('categorias');
 
         <div id="right-container">
           <div>
-            <a href="#"><img src="../img/icon-face.jpg" alt="facebook it!"/></a>
+            <a class="lbOn" href="../img/icon-face.jpg"><img src="../img/icon-face.jpg" alt="facebook it!"/></a>
             <a href="#"><img src="../img/icon-twitter.jpg" alt="twitealo!"/></a>
             <a href="#"><img src="../img/icon-mail.jpg" alt="email it!"/></a>
           </div>

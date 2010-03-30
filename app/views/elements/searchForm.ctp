@@ -1,16 +1,18 @@
 <?php 
 	 echo $form->create('Cupone',array('action'=>'search'));
      echo $ajax->autocomplete('Cupone.titulo','', array('maxlength'=>10, 'value' => 'Buscar'));
+      echo $form->submit('lupa.jpg', array('class' => 'submitBtn'));
 ?>       
               <div id="drop-box">
                
 
           <?php
-                echo $form->input('Search.tag_id', array('value' =>'Lista Despegable', 'label' => '', 'div' => 'false'));
-               // echo $form->submit('Search');
+		      $options=array('1'=>'2x1','2'=>'Gratis');
+				echo $form->select('Search.tags',$options, null, array('label' => '', 'div' => 'false'));
+
                 ?>
           </div>
           
-                  <input type="hidden" id="searchsubmit">
+                  
               </div>
 <?php echo $form->end(); ?>
