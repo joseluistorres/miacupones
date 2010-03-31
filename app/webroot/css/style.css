@@ -9,7 +9,8 @@ CSS
   }
 
 body {
-  background-color: #00AFF0;
+  background: url(../img/Contenido/fondo-principal.jpg) repeat-x;
+  background-color: #fbf59d;
   font-family: Myriad Pro, Arial;
   }
 
@@ -53,6 +54,42 @@ select
 /*------------------------------------------------*/
 /*----------------[ MAIN LAYOUT ]-----------------*/
 /*------------------------------------------------*/
+.categorias  {  
+
+  padding: 5px 0px 5px 35px;
+  margin: 0px -40px 0px 45px;  
+  background: url(../img/Contenido/esquinas-contenido/fondo-titulo.jpg);
+}
+
+.categorias a {
+  color: #fff;
+  font-family: Myriad Pro, Arial;
+  font-size: 1em; 
+  background: url(../img/Contenido/esquinas-contenido/fondo-titulo.jpg) ;
+   
+}
+
+.categorias a:hover {
+   background: url(../img/Contenido/esquinas-contenido/fondo-titulo-3.jpg) ;
+   } 
+
+.categorias-2  {
+  padding: 5px 0px 5px 35px;
+  margin: 0px -40px 0px 45px;  
+  background: url(../img/Contenido/esquinas-contenido/fondo-titulo-2.jpg);
+}
+
+.categorias-2 a {
+  color: #fff;
+  font-family: Myriad Pro, Arial;
+  font-size: 1em; 
+  background: url(../img/Contenido/esquinas-contenido/fondo-titulo-2.jpg); 
+}
+
+.categorias-2 a:hover {
+  background: url(../img/Contenido/esquinas-contenido/fondo-titulo-3.jpg) ;
+} 
+
 #wrapper {
   width: 1200px;
   margin: auto;
@@ -72,10 +109,11 @@ select
   
   
 #left-container {
+  padding: 160px 0px 5px 0px;
   float: left;
   width: 180px;
-  height: 600px;  
-  }
+  height: 600px;
+}
 
 #content-container{
   float: left;
@@ -153,9 +191,9 @@ select
   }
 
 .header-title {
-  width: 1024px;
+  width: 1150px;
   height: 107px;
-  background: url(../img/fondo.jpg?idx) repeat-x;
+  background: url(../img/fondo.jpg?id3) repeat-x;
 
   }
 
@@ -345,13 +383,7 @@ div.auto_complete ul li {
   
 #subcatego-btn {
 	float:left; 
-	margin: 120px 0 0 22px;
-}
-
-#categorias img{
-	border:none;
-	float:right; 
-	margin: -2px -37px 0 22px;
+	margin: -50px 0pt 0pt 18px;
 }
 
 #anunciate img{

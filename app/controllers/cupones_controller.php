@@ -19,6 +19,11 @@
              if(isset($this->data['Search']['tags']))
              
              $resultsSearchCupons = $this->Cupone->getResults($keywords, 'contador', 'activo');
+             
+             if ($this->Cupone->getNumRows()==1){
+                 $this->redirectToDetail($resultsSearchCupons[0]['Cupone']['id']);
+             }
+             
              $this->set('resultsSearchCupons', $resultsSearchCupons);
         }
         
@@ -86,5 +91,10 @@
             $this->categorias = $this->getCategorias();
             $this->set('categorias', $this->categorias);
         }
+        
+        private function redirectToDetail($id){
+             $redirect = array('action' => 'cupon', $id);
+             $this->redirect($redirect);
+         }
     }
 ?>
