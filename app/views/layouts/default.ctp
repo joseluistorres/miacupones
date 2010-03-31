@@ -46,11 +46,11 @@ echo $this->element('searchForm');
 ?>
  </div>
 
-
-        <div class="header-title">
-          <img src="../img/titulo-busca-ahorro.jpg" id="buscahorro-img" alt="" />
-          <img src="../img/edificios.jpg" id="edificios-img" alt="" />
-          <a href="../img/pasos.png" rel="lightbox" title=""><img src="../img/btn-obtener-cupon.jpg" id="obtenercupon-btn" alt="Haz click y enterate" /></a>
+		<div class="header-title">
+          <img src="../img/edificios.jpg?id1" id="edificios-img" alt="" />
+          <a href="../img/img-3pasos-cupon.png" rel="lightbox" title="">
+          <img src="../img/btn-obtener-cupon.jpg?id2" id="obtenercupon-btn" alt="Haz click y enterate" />
+          </a>
         </div>
       </div> <!-- head-wrap -->        
 <div id="container">

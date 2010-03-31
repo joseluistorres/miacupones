@@ -153,8 +153,10 @@ select
   }
 
 .header-title {
-  height: 296px;
-  background: url(../img/fondo.jpg) repeat-x;
+  width: 1024px;
+  height: 107px;
+  background: url(../img/fondo.jpg?idx) repeat-x;
+
   }
 
 .header-title img {
@@ -309,11 +311,12 @@ div.auto_complete ul li {
 
 #edificios-img {
 	margin-left: 130px;
+	float:left;
 }
 
 #obtenercupon-btn {
-	float:right; 
-	margin: 90px 60px 0px 0px;
+	float:left;
+	margin: 18px 0px 0px 40px;
 }
 
 

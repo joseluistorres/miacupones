@@ -69,6 +69,10 @@
              $this->set('resultsSearchCupons', $resultsSearchCupons);
         }
         
+        function planilla(){
+            
+        }
+        
         private function getCategorias(){
            return $this->Categoria->getAllWithCupons(); 
         }
